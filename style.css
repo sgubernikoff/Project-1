@@ -13,7 +13,7 @@ body {
 #foodContainer {
   position: fixed;
   top: 18%;
-  margin-left: 44%;
+  margin-left: 42%;
   height: 300px;
   width: auto;
 }
@@ -36,7 +36,7 @@ form {
   color: rgb(149, 88, 173);
   position: fixed;
   top: 50%;
-  left: 20%;
+  left: 48%;
 }
 
 #reset {
@@ -70,8 +70,10 @@ form {
   transform: translate(-50%, -50%);
   width: 50%;
 
-  background-color: white;
-  padding: 8rem;
+  background-color: rgb(149, 88, 173);
+  color: rgb(174, 205, 211);
+  text-align: center;
+  padding: 3rem;
   border-radius: 2px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 10;
@@ -80,3 +82,11 @@ form {
 /* #hidden {
   display: none;
 } */
+
+.bink {
+  color: rgb(149, 88, 173);
+}
+
+li {
+  cursor: pointer;
+}

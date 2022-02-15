@@ -8,11 +8,10 @@ const button = document.querySelector(".submit");
 const form = document.querySelector("form");
 const spin = document.querySelector("#spin");
 const foodHold = document.querySelector("#foodContainer");
+const reset = document.querySelector("#reset");
 
-function tacoBell() {
-  fetch(
-    "https://autocomplete.clearbit.com/v1/companies/suggest?query=:taco%20bell"
-  )
+function panera() {
+  fetch("https://autocomplete.clearbit.com/v1/companies/suggest?query=:panera")
     .then((resp) => resp.json())
     .then((data) => {
       pushFood(data);
@@ -65,9 +64,9 @@ function fiveGuys() {
     .then((data) => pushFood(data));
 }
 
-function shakeShack() {
+function sweetgreen() {
   fetch(
-    "https://autocomplete.clearbit.com/v1/companies/suggest?query=:shakeshack"
+    "https://autocomplete.clearbit.com/v1/companies/suggest?query=:sweetgreen"
   )
     .then((resp) => resp.json())
     .then((data) => pushFood(data));
@@ -81,8 +80,10 @@ function pizzaHut() {
     .then((data) => pushFood(data));
 }
 
-function zaxbys() {
-  fetch("https://autocomplete.clearbit.com/v1/companies/suggest?query=:zaxbys")
+function chipotle() {
+  fetch(
+    "https://autocomplete.clearbit.com/v1/companies/suggest?query=:chipotle"
+  )
     .then((resp) => resp.json())
     .then((data) => pushFood(data));
 }
@@ -92,7 +93,7 @@ function kfc() {
     .then((data) => pushFood(data));
 }
 
-tacoBell();
+panera();
 wendy();
 burgerKing();
 chickFilA();
@@ -100,9 +101,9 @@ dominos();
 mcdonald();
 arbys();
 fiveGuys();
-shakeShack();
+sweetgreen();
 pizzaHut();
-zaxbys();
+chipotle();
 kfc();
 
 const foodArray = [];
@@ -115,129 +116,47 @@ function spinNumber(min, max) {
   spin.addEventListener("click", () => {
     min = Math.ceil(min);
     max = Math.floor(max);
-    Math.floor(Math.random() * (max - min + 1) + min);
-    renderImage();
-    console.log(foodArray);
+    let secretNumber = Math.floor(Math.random() * (max - min + 1) + min);
+    if (secretNumber === 0) {
+      foodHold.src = foodArray[0];
+    }
+    if (secretNumber === 1) {
+      foodHold.src = foodArray[1];
+    }
+    if (secretNumber === 2) {
+      foodHold.src = foodArray[2];
+    }
+    if (secretNumber === 3) {
+      foodHold.src = foodArray[3];
+    }
+    if (secretNumber === 4) {
+      foodHold.src = foodArray[4];
+    }
+    if (secretNumber === 5) {
+      foodHold.src = foodArray[5];
+    }
+    if (secretNumber === 6) {
+      foodHold.src = foodArray[6];
+    }
+    if (secretNumber === 7) {
+      foodHold.src = foodArray[7];
+    }
+    if (secretNumber === 8) {
+      foodHold.src = foodArray[8];
+    }
+    if (secretNumber === 9) {
+      foodHold.src = foodArray[9];
+    }
+    if (secretNumber === 10) {
+      foodHold.src = foodArray[10];
+    }
+    if (secretNumber === 11) {
+      foodHold.src = foodArray[11];
+    }
   });
 }
 
-spinNumber();
-
-function renderImage() {
-  const generateImg = foodArray[spinNumber(0, 11)];
-  console.log(generateImg);
-  return generateImg;
-}
-
-// function loadWendy(taco) {
-//   spin.addEventListener("click", () => {
-//     let secretNumber = Math.trunc(Math.random() * 12) + 1;
-//     console.log(secretNumber);
-//     if (secretNumber === 2) {
-//       foodHold.src = taco[0].logo;
-//     }
-//   });
-// }
-
-// function loadBurgerKing(taco) {
-//   spin.addEventListener("click", () => {
-//     let secretNumber = Math.trunc(Math.random() * 12) + 1;
-//     console.log(secretNumber);
-//     if (secretNumber === 3) {
-//       foodHold.src = taco[0].logo;
-//     }
-//   });
-// }
-
-// function loadChickFilA(taco) {
-//   spin.addEventListener("click", () => {
-//     let secretNumber = Math.trunc(Math.random() * 12) + 1;
-//     console.log(secretNumber);
-//     if (secretNumber === 4) {
-//       foodHold.src = taco[0].logo;
-//     }
-//   });
-// }
-
-// function loadDominos(taco) {
-//   spin.addEventListener("click", () => {
-//     let secretNumber = Math.trunc(Math.random() * 12) + 1;
-//     console.log(secretNumber);
-//     if (secretNumber === 5) {
-//       foodHold.src = taco[0].logo;
-//     }
-//   });
-// }
-
-// function loadMcd(taco) {
-//   spin.addEventListener("click", () => {
-//     let secretNumber = Math.trunc(Math.random() * 12) + 1;
-//     console.log(secretNumber);
-//     if (secretNumber === 6) {
-//       foodHold.src = taco[0].logo;
-//     }
-//   });
-// }
-
-// function loadArby(taco) {
-//   spin.addEventListener("click", () => {
-//     let secretNumber = Math.trunc(Math.random() * 12) + 1;
-//     console.log(secretNumber);
-//     if (secretNumber === 7) {
-//       foodHold.src = taco[0].logo;
-//     }
-//   });
-// }
-
-// function loadFiveGuys(taco) {
-//   spin.addEventListener("click", () => {
-//     let secretNumber = Math.trunc(Math.random() * 12) + 1;
-//     console.log(secretNumber);
-//     if (secretNumber === 8) {
-//       foodHold.src = taco[0].logo;
-//     }
-//   });
-// }
-
-// function loadShakeShack(taco) {
-//   spin.addEventListener("click", () => {
-//     let secretNumber = Math.trunc(Math.random() * 12) + 1;
-//     console.log(secretNumber);
-//     if (secretNumber === 9) {
-//       foodHold.src = taco[0].logo;
-//     }
-//   });
-// }
-
-// function loadPizzaHut(taco) {
-//   spin.addEventListener("click", () => {
-//     let secretNumber = Math.trunc(Math.random() * 12) + 1;
-//     console.log(secretNumber);
-//     if (secretNumber === 10) {
-//       foodHold.src = taco[0].logo;
-//     }
-//   });
-// }
-
-// function loadZaxbys(taco) {
-//   spin.addEventListener("click", () => {
-//     let secretNumber = Math.trunc(Math.random() * 12) + 1;
-//     console.log(secretNumber);
-//     if (secretNumber === 11) {
-//       foodHold.src = taco[0].logo;
-//     }
-//   });
-// }
-
-// function loadKfc(taco) {
-//   spin.addEventListener("click", () => {
-//     let secretNumber = Math.trunc(Math.random() * 12) + 1;
-//     console.log(secretNumber);
-//     if (secretNumber === 12) {
-//       foodHold.src = taco[0].logo;
-//     }
-//   });
-// }
+spinNumber(0, 11);
 
 function addOrder() {
   button.addEventListener("click", (e) => {
@@ -252,9 +171,18 @@ function addOrder() {
     };
 
     let newList = document.createElement("li");
+    let closeBtn = document.createElement("button");
+    closeBtn.textContent = "X";
+    closeBtn.className = "bink";
+
+    closeBtn.addEventListener("click", () => {
+      newList.remove();
+      closeBtn.remove();
+    });
     newList.textContent = newOrder.customer;
+
     if (Boolean(newCust.value) === true) {
-      orders.append(newList);
+      orders.append(newList, closeBtn);
     }
     form.reset();
 
@@ -262,18 +190,17 @@ function addOrder() {
       let popup = document.createElement("div");
       popup.id = "popup";
       let closer = document.createElement("p");
-      closer.textContent = "X";
       let customerName = document.createElement("h2");
       let customerDrink = document.createElement("h2");
       let customerMain = document.createElement("h2");
       let customerSide = document.createElement("h2");
       let customerDessert = document.createElement("h2");
 
-      customerName.textContent = `Customer: ${newOrder.customer}`;
-      customerDrink.textContent = `Drink: ${newOrder.drink}`;
-      customerMain.textContent = `Main: ${newOrder.main}`;
-      customerSide.textContent = `Side: ${newOrder.side}`;
-      customerDessert.textContent = `Dessert: ${newOrder.dessert}`;
+      customerName.textContent = `🧍 ${newOrder.customer}'s Order!`;
+      customerDrink.textContent = `🥤 Drink: ${newOrder.drink}`;
+      customerMain.textContent = `🍔 Main: ${newOrder.main}`;
+      customerSide.textContent = `🍟 Side: ${newOrder.side}`;
+      customerDessert.textContent = `🎂 Dessert: ${newOrder.dessert}`;
 
       document.body.append(popup);
 
@@ -301,3 +228,13 @@ function closePopup() {
     }
   });
 }
+
+function resetButton() {
+  reset.addEventListener("click", () => {
+    foodHold.src =
+      "https://lh3.googleusercontent.com/SgmY6NCtxwwRR0NI-T3AIVx6jab8C0W6mCws1O8OqGvtQUPpBAAd-Ayh1Zk6_i2UwrrUuJU0vdZEJF5lL_MuBSaTwztQF0rhT5GA1QKdt1qTyRkXzBe_zHlFZFTmS5vq5_sEMVcCVg=w2400?source=screenshot.guru";
+    form.reset();
+  });
+}
+
+resetButton();

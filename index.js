@@ -4,13 +4,13 @@ let newMain = document.querySelector("#main");
 let newSide = document.querySelector("#side");
 let newDes = document.querySelector("#dessert");
 let orders = document.querySelector(".orders");
+let menu = document.querySelector(".menuLink");
+let menuHolder = document.querySelector(".menu");
 const button = document.querySelector(".submit");
 const form = document.querySelector("form");
 const spin = document.querySelector("#spin");
 const foodHold = document.querySelector("#foodContainer");
 const reset = document.querySelector("#reset");
-let menu = document.querySelector(".menuLink");
-let menuHolder = document.querySelector(".menu");
 const foodArray = [];
 
 function panera() {
@@ -183,7 +183,7 @@ function addOrder() {
       newList.remove();
       closeBtn.remove();
     });
-    newList.textContent = newOrder.customer;
+    newList.textContent = newOrder.customer.toUpperCase();
 
     if (Boolean(newCust.value) === true) {
       orders.append(newList, closeBtn);

@@ -9,6 +9,9 @@ const form = document.querySelector("form");
 const spin = document.querySelector("#spin");
 const foodHold = document.querySelector("#foodContainer");
 const reset = document.querySelector("#reset");
+let menu = document.querySelector(".menuLink");
+let menuHolder = document.querySelector(".menu");
+const foodArray = [];
 
 function panera() {
   fetch("https://autocomplete.clearbit.com/v1/companies/suggest?query=:panera")
@@ -106,8 +109,6 @@ pizzaHut();
 chipotle();
 kfc();
 
-const foodArray = [];
-
 function pushFood(food) {
   foodArray.push(food[0].logo);
 }
@@ -123,6 +124,7 @@ function spinNumber(min, max) {
     if (secretNumber === 1) {
       foodHold.src = foodArray[1];
     }
+
     if (secretNumber === 2) {
       foodHold.src = foodArray[2];
     }
@@ -153,6 +155,7 @@ function spinNumber(min, max) {
     if (secretNumber === 11) {
       foodHold.src = foodArray[11];
     }
+    console.log(secretNumber);
   });
 }
 
@@ -171,6 +174,7 @@ function addOrder() {
     };
 
     let newList = document.createElement("li");
+    newList.className = "list";
     let closeBtn = document.createElement("button");
     closeBtn.textContent = "X";
     closeBtn.className = "bink";

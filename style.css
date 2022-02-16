@@ -11,11 +11,10 @@ body {
 }
 
 #foodContainer {
-  position: fixed;
-  top: 18%;
-  margin-left: 42%;
-  height: 300px;
-  width: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
 }
 
 form {
@@ -34,24 +33,28 @@ form {
 
 #spin {
   color: rgb(149, 88, 173);
-  position: fixed;
-  top: 50%;
-  left: 48%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 9%;
+  text-align: center;
 }
 
 #reset {
   color: rgb(149, 88, 173);
-  position: fixed;
-  top: 53%;
-  left: 48.9%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 7%;
+  text-align: center;
 }
 
 .orders {
   color: rgb(149, 88, 173);
   font-size: 20px;
-  position: fixed;
-  top: 15%;
-  left: 15%;
+  display: block;
+  margin-left: auto;
+  margin-right: 50%;
   font-weight: bold;
 }
 
@@ -60,10 +63,12 @@ form {
   color: rgb(149, 88, 173);
   font-weight: bold;
   position: fixed;
-  top: 15%;
+  display: flex;
+  top: 14%;
 }
 
 #popup {
+  flex-basis: auto;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -87,6 +92,29 @@ form {
   color: rgb(149, 88, 173);
 }
 
-li {
+.list {
   cursor: pointer;
+  color: rgb(149, 88, 173);
+  text-decoration: underline;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+.instructions {
+  text-align: center;
+  font-size: 28px;
+  text-decoration: underline;
+}
+
+.inst {
+  text-align: center;
+}
+
+.menu {
+  text-align: center;
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgb(149, 88, 173);
+  font-size: 15px;
+  top: 100%;
 }

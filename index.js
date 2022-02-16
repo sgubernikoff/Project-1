@@ -12,6 +12,20 @@ const spin = document.querySelector("#spin");
 const foodHold = document.querySelector("#foodContainer");
 const reset = document.querySelector("#reset");
 const foodArray = [];
+const paneraLink = document.createElement("a");
+const wendyLink = document.createElement("a");
+const burgerKingLink = document.createElement("a");
+const chickFilALink = document.createElement("a");
+const dominosLink = document.createElement("a");
+const mcdonaldLink = document.createElement("a");
+const arbysLink = document.createElement("a");
+const fiveGuysLink = document.createElement("a");
+const sweetGreenLink = document.createElement("a");
+const pizzaHutLink = document.createElement("a");
+const chipotleLink = document.createElement("a");
+const kfcLink = document.createElement("a");
+const menuLinks = document.querySelector("#menuLinks");
+const menuListv = document.querySelector("#menuList");
 
 function panera() {
   fetch("https://autocomplete.clearbit.com/v1/companies/suggest?query=:panera")
@@ -242,3 +256,79 @@ function resetButton() {
 }
 
 resetButton();
+
+function createMenuList() {
+  const menuButton = document.querySelector(".menu");
+
+  menuButton.addEventListener("click", () => {
+    console.log("click");
+
+    menuList.append(
+      wendyLink,
+      paneraLink,
+      burgerKingLink,
+      mcdonaldLink,
+      dominosLink,
+      fiveGuysLink,
+      chickFilALink,
+      sweetGreenLink,
+      pizzaHutLink,
+      arbysLink,
+      chipotleLink,
+      kfcLink
+    );
+    paneraLink.href = "https://www.panerabread.com/en-us/home.html";
+    paneraLink.textContent = "Panera";
+    paneraLink.className = "pan";
+    paneraLink.target = "_blank";
+    wendyLink.href = "https://order.wendys.com/categories?site=menu";
+    wendyLink.textContent = "Wendy's";
+    wendyLink.className = "wen";
+    wendyLink.target = "_blank";
+    burgerKingLink.href = "https://www.bk.com/menu";
+    burgerKingLink.textContent = "Burger King";
+    burgerKingLink.className = "bur";
+    burgerKingLink.target = "_blank";
+    mcdonaldLink.href = "https://www.mcdonalds.com/us/en-us/full-menu.html";
+    mcdonaldLink.textContent = "McDonald's";
+    mcdonaldLink.className = "mcd";
+    mcdonaldLink.target = "_blank";
+    dominosLink.href =
+      "https://www.dominos.com/en/pages/order/menu#!/menu/category/viewall/";
+    dominosLink.textContent = "Domino's";
+    dominosLink.className = "dom";
+    dominosLink.target = "_blank";
+    fiveGuysLink.href =
+      "https://www.fiveguys.com/Menu?gclid=Cj0KCQiA3rKQBhCNARIsACUEW_a2cTE1zBYMR9P5NR-EJUlRGqduwIsDBw8K9-SbVZXWfWOOFeIoEloaArhVEALw_wcB";
+    fiveGuysLink.textContent = "Five Guy's";
+    fiveGuysLink.className = "fiv";
+    fiveGuysLink.target = "_blank";
+    sweetGreenLink.href =
+      "https://www.sweetgreen.com/menu?gclid=Cj0KCQiA3rKQBhCNARIsACUEW_a_0RlzWXw7qMFjEBLhayQAgiahvGJZiTYYsrJgrInlPbP0Z0gDFAIaAgX_EALw_wcB";
+    sweetGreenLink.textContent = "Sweetgreen";
+    sweetGreenLink.className = "swe";
+    sweetGreenLink.target = "_blank";
+    pizzaHutLink.href = "https://www.pizzahut.com/";
+    pizzaHutLink.textContent = "Pizza Hut";
+    pizzaHutLink.className = "piz";
+    pizzaHutLink.target = "_blank";
+    arbysLink.href = "https://www.arbys.com/menu/";
+    arbysLink.textContent = "Arby's";
+    arbysLink.className = "arb";
+    arbysLink.target = "_blank";
+    chickFilALink.href =
+      "https://www.chick-fil-a.com/menu?gclid=Cj0KCQiA3rKQBhCNARIsACUEW_Zl9MCa-rOyM-NS61Sgo9nuoorWRtPMPOa0hXbkXiA2fwnVAOMrVdIaAqUzEALw_wcB";
+    chickFilALink.textContent = "Chick-Fil-A";
+    chickFilALink.className = "chi";
+    chickFilALink.target = "_blank";
+    chipotleLink.href = "https://www.chipotle.com/order/#menu";
+    chipotleLink.textContent = "Chipotle";
+    chipotleLink.className = "chip";
+    chipotleLink.target = "_blank";
+    kfcLink.href = "https://www.kfc.com/menu";
+    kfcLink.textContent = "KFC";
+    kfcLink.className = "kfc";
+    kfcLink.target = "_blank";
+  });
+}
+createMenuList();

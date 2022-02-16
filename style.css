@@ -97,7 +97,7 @@ form {
   cursor: pointer;
   color: rgb(149, 88, 173);
   text-decoration: underline;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: lighter;
 }
 
@@ -125,4 +125,61 @@ form {
   color: rgb(149, 88, 173);
   font-size: 15px;
   top: 100%;
+}
+
+a {
+  margin: 5px;
+}
+
+.pan {
+  color: rgb(0, 161, 0);
+}
+
+.wen {
+  color: red;
+}
+
+.fiv {
+  color: maroon;
+}
+
+.bur {
+  color: rgb(175, 102, 18);
+}
+
+.mcd {
+  color: yellow;
+}
+
+.dom {
+  color: blue;
+}
+
+.swe {
+  color: rgb(1, 88, 1);
+}
+
+.piz {
+  color: rgb(0, 0, 0);
+}
+
+.arb {
+  color: white;
+}
+
+.chi {
+  color: red;
+}
+
+.chip {
+  color: brown;
+}
+
+.kfc {
+  color: rgb(255, 60, 60);
+}
+
+#menuList {
+  margin-top: 50px;
+  text-align: center;
 }

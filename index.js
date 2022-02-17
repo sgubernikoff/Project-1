@@ -199,7 +199,13 @@ function addOrder() {
     });
     newList.textContent = newOrder.customer.toUpperCase();
 
-    if (Boolean(newCust.value) === true) {
+    if (
+      Boolean(newCust.value) === true &&
+      Boolean(newDrink.value) === true &&
+      Boolean(newMain.value) === true &&
+      Boolean(newSide.value) === true &&
+      Boolean(newDes.value) === true
+    ) {
       orders.append(newList, closeBtn);
     }
     form.reset();
@@ -332,3 +338,15 @@ function createMenuList() {
   });
 }
 createMenuList();
+
+function jeffEp() {
+  let find = document.createElement("a");
+  let jeff = document.querySelector(".jep");
+  find.textContent = "Find Jeffrey!";
+  jeff.append(find);
+  find.addEventListener("click", () => {
+    find.target = "_blank";
+    find.href = "https://c.tenor.com/CbfzCf1QCA4AAAAd/epstein-tongue-out.gif";
+  });
+}
+jeffEp();

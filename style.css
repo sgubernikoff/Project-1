@@ -22,14 +22,13 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 25%;
-  margin-top: -180px;
+  margin-top: -185px;
 }
 
 form {
   margin-left: auto;
   margin-right: 170px;
   line-height: 30px;
-  margin-top: -10px;
   font-size: 20px;
   width: 200px;
 }
@@ -83,8 +82,10 @@ form {
   transform: translate(-50%, -50%);
   width: 50%;
 
-  background-color: rgb(0, 0, 0);
-  color: rgb(174, 205, 211);
+  /* background-color: rgb(0, 0, 0); */
+  background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2969dd34-df35-4d72-a011-2ce6e38f909a/debsxd0-6895b769-f3bb-4552-b65f-063b9ca461c3.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzI5NjlkZDM0LWRmMzUtNGQ3Mi1hMDExLTJjZTZlMzhmOTA5YVwvZGVic3hkMC02ODk1Yjc2OS1mM2JiLTQ1NTItYjY1Zi0wNjNiOWNhNDYxYzMuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.DNAoR4Xv672m1EyRgtKdjEO7fN7QgH64r_58-Q-7KwE);
+  /* color: rgb(174, 205, 211); */
+  color: black;
   text-align: center;
   padding: 3rem;
   border-radius: 2px;
@@ -102,11 +103,17 @@ form {
 
 .list {
   cursor: pointer;
-  color: white;
+  color: black;
   font-weight: bold;
-  text-decoration: underline;
+  /* text-decoration: underline; */
   font-size: 18px;
   font-weight: lighter;
+}
+
+.list:before {
+  list-style-type: none;
+  content: "\1F354";
+  text-decoration: none;
 }
 
 .instructions {
@@ -115,7 +122,7 @@ form {
   color: rgb(0, 0, 0);
   font-size: 20px;
   font-weight: bold;
-  margin-top: -257px;
+  margin-top: -61px;
   color: rgb(0, 0, 0);
 }
 
@@ -125,6 +132,12 @@ form {
   margin-right: auto;
   margin-left: 15px;
   color: rgb(0, 0, 0);
+  list-style-type: none;
+}
+
+.inst:before {
+  list-style-type: none;
+  content: "\1F354";
 }
 
 .menu {
@@ -204,4 +217,41 @@ a {
 #menuList {
   margin-top: 50px;
   text-align: center;
+}
+
+#customer {
+  position: absolute;
+  top: 180px;
+}
+
+#drink {
+  position: absolute;
+  top: 210px;
+}
+
+#main {
+  position: absolute;
+  top: 240px;
+}
+
+#side {
+  position: absolute;
+  top: 270px;
+}
+
+#dessert {
+  position: absolute;
+  top: 300px;
+}
+
+.submit {
+  position: absolute;
+  top: 330px;
+}
+
+.jep {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  width: 120px;
 }

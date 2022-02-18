@@ -93,9 +93,9 @@ form {
   z-index: 10;
 }
 
-/* #hidden {
+.hidden {
   display: none;
-} */
+}
 
 .bink {
   color: rgb(0, 0, 0);
@@ -250,8 +250,37 @@ a {
 }
 
 .jep {
+  display: block;
   text-align: center;
   margin-right: auto;
   margin-left: auto;
   width: 120px;
+}
+
+.entry {
+  position: absolute;
+  left: 0px;
+  top: -2px;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.fries {
+  position: absolute;
+  left: 0px;
+  top: -2px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  animation: rotation 7s infinite linear;
 }

@@ -26,6 +26,8 @@ const chipotleLink = document.createElement("a");
 const kfcLink = document.createElement("a");
 const menuLinks = document.querySelector("#menuLinks");
 const menuListv = document.querySelector("#menuList");
+let fries = document.querySelector(".fries");
+let enter = document.querySelector(".entry");
 
 function panera() {
   fetch("https://autocomplete.clearbit.com/v1/companies/suggest?query=:panera")
@@ -339,14 +341,26 @@ function createMenuList() {
 }
 createMenuList();
 
-function jeffEp() {
-  let find = document.createElement("a");
-  let jeff = document.querySelector(".jep");
-  find.textContent = "Find Jeffrey!";
-  jeff.append(find);
-  find.addEventListener("click", () => {
-    find.target = "_blank";
-    find.href = "https://c.tenor.com/CbfzCf1QCA4AAAAd/epstein-tongue-out.gif";
+// function tBelly() {
+//   let find = document.createElement("a");
+//   let jeff = document.querySelector(".jep");
+//   find.textContent = "TBell Special";
+//   jeff.append(find);
+//   find.addEventListener("click", () => {
+//     find.target = "_blank";
+//     find.href =
+//       "https://lh3.googleusercontent.com/S1hc3rOGX_1zdIi42MvvTrzqXc5Az6nxqMd3z3m4QwWOx9s3lKqhbkfDZ1KHVv9zAzqbt5YecLu2MEWK5RSEKDsIsYxovuDywMG825y4B5or28OXeirzjnOHye01dgSigJ-17Zq2MA=w2400";
+//     find.remove();
+//     jeff.remove();
+//   });
+// }
+// tBelly();
+
+function startUp() {
+  fries.addEventListener("click", () => {
+    fries.className = "fries hidden";
+    enter.className = "entry hidden";
   });
 }
-jeffEp();
+
+startUp();
